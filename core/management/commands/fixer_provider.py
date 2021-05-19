@@ -15,7 +15,7 @@ class Command(BaseCommand):
               f'access_key={settings.FIXER_API_KEY}&' \
               f'base={settings.FIXER_BASE}&symbols=MXN'
         response = requests.get(url)
-        response.raise_for_status()
+
         assert response.status_code == 200, response.text
 
         data = response.json()
