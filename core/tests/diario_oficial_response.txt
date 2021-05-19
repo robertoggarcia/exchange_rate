@@ -1,0 +1,278 @@
+<html>
+<head>
+<meta content="index, nofollow" name="robots"/>
+<script type="text/javascript">var djConfig = {isDebug:false,parseWidgets:false,searchIds:["CALENDARIOINICIAL","CALENDARIOFINAL"]};</script>
+<script language="JavaScript" src="js/dojo-0.3.1-ajax-bm/dojo.js" type="text/javascript"></script>
+<script type="text/javascript">dojo.require("dojo.widget.MyDropdownDatePicker");</script>
+<script language="JavaScript" src="js/tipCamValidar.js" type="text/javascript"></script>
+<link href="css/borders.css" rel="stylesheet" type="text/css"/>
+<link href="css/TiposCambios.css" rel="stylesheet" type="text/css"/>
+<title>SIE - Mercado cambiario</title>
+</head>
+<body>
+<form action="/tipcamb/tipCamIHAction.do" method="post" name="tipCambMIActionForm" target="_blank">
+<input name="idioma" type="hidden" value="sp"/>
+<table align="center" border="0" width="80%">
+<tr>
+<td align="center" class="titulo">
+            Tipo de cambio para solventar obligaciones denominadas en dólares de los EE.UU.A.,<br/>pagaderas en la República Mexicana
+            <sup>1/</sup>
+</td>
+</tr>
+<tr>
+<td height="6">
+</td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" class="renglonPar" width="100%">
+<tr>
+<td>
+<table align="left" border="0" cellspacing="0">
+<tr>
+<td class="fechasFormatoSalida"><div align="center">Fecha Inicial</div></td>
+<td><div align="center"></div></td>
+<td><div align="center"></div></td>
+<td class="fechasFormatoSalida"><div align="center">Fecha Final</div></td>
+<td><div align="center"></div></td>
+</tr>
+<tr>
+<td id="fechaInicial"><div align="center"><input class="renglonNon" name="fechaInicial" size="13" type="text" value="dd/mm/aaaa"/></div></td>
+<td width="18">
+<div align="center"><span campofecha="fechaInicial" date="01/01/2006" dateformat="%d/%m/%Y" datemax="18/05/2021" datemin="01/01/1990" dojotype="MyDropdownDatePicker" fechasinhabiles="true" id="CALENDARIOINICIAL" idioma="es" prefijosseries="none" widgetid="INI_cal">
+</span>
+</div></td>
+<td width="20"><div align="center">-</div></td>
+<td id="fechaFinal"><div align="center"><input class="renglonNon" name="fechaFinal" size="13" type="text" value="dd/mm/aaaa"/></div></td>
+<td width="18">
+<div align="center"><span campofecha="fechaFinal" date="" dateformat="%d/%m/%Y" datemax="18/05/2021" datemin="01/01/1990" dojotype="MyDropdownDatePicker" fechasinhabiles="true" id="CALENDARIOFINAL" idioma="es" prefijosseries="none" widgetid="FIN_cal">
+</span>
+</div></td>
+</tr>
+</table>
+</td>
+<td align="right">
+<table border="0" cellspacing="0">
+<tr>
+<td class="fechasFormatoSalida">
+<div align="center">Formato
+                        </div></td>
+<td> </td>
+</tr>
+<tr>
+<td>
+<div align="center"><select class="renglonNon" name="salida"><option class="renglonNon" selected="selected" value="HTML">HTML</option>
+<option class="renglonNon" value="XLS">XLS</option></select>
+</div></td>
+<td>
+<input class="botonesSIE" onclick="return  esMenorIgual(document.tipCambMIActionForm.fechaInicial.value,document.tipCambMIActionForm.fechaFinal.value,'sp')
+        &amp;&amp; dentroDeRango(document.tipCambMIActionForm.fechaInicial.value,document.tipCambMIActionForm.fechaFinal.value,'01/01/1990','01/01/2050','sp')" type="submit" value="Consultar series"/>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="6"></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="b4"></td>
+<td class="b5">
+<table border="0" cellspacing="0" width="100%">
+<tr>
+<td height="8"></td>
+</tr>
+<tr align="center" class="renglonTituloColumnas">
+<td align="left">
+                              Fecha
+                            </td>
+<td align="right" width="111">
+                              FIX
+                              <sup>2/</sup>
+</td>
+<td align="right" width="111">
+                              Publicación DOF
+                              <sup>3/</sup>
+</td>
+<td align="right" width="111">
+                              Para pagos
+                              <sup>4/</sup>
+</td>
+<!--td>
+                              <input type="checkbox" name="seriesSeleccionadas" value="FIX">
+                            </td-->
+</tr>
+<tr align="center" class="renglonNon">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                18/05/2021
+                              </td>
+<td align="right">
+                                19.8313
+                              </td>
+<td align="right">
+                                19.8028
+                              </td>
+<td align="right">
+                                19.8487
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+<tr align="center" class="renglonPar">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                17/05/2021
+                              </td>
+<td align="right">
+                                19.8028
+                              </td>
+<td align="right">
+                                19.8487
+                              </td>
+<td align="right">
+                                20.0495
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+<tr align="center" class="renglonNon">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                16/05/2021
+                              </td>
+<td align="right">
+                                N/E
+                              </td>
+<td align="right">
+                                N/E
+                              </td>
+<td align="right">
+                                20.0495
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+<tr align="center" class="renglonPar">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                15/05/2021
+                              </td>
+<td align="right">
+                                N/E
+                              </td>
+<td align="right">
+                                N/E
+                              </td>
+<td align="right">
+                                20.0495
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+<tr align="center" class="renglonNon">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                14/05/2021
+                              </td>
+<td align="right">
+                                19.8487
+                              </td>
+<td align="right">
+                                20.0495
+                              </td>
+<td align="right">
+                                20.0940
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+<tr align="center" class="renglonPar">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                13/05/2021
+                              </td>
+<td align="right">
+                                20.0495
+                              </td>
+<td align="right">
+                                20.0940
+                              </td>
+<td align="right">
+                                19.8848
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+<tr align="center" class="renglonNon">
+<td align="left" style="padding-top:5px;padding-bottom:5px;">
+                                12/05/2021
+                              </td>
+<td align="right">
+                                20.0940
+                              </td>
+<td align="right">
+                                19.8848
+                              </td>
+<td align="right">
+                                19.8860
+                              </td>
+<!--td>
+                                &nbsp;
+                              </td-->
+</tr>
+</table>
+</td>
+<td class="b6"></td>
+</tr>
+<tr>
+<td class="b7"></td>
+<td class="b8"></td>
+<td class="b9"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!--tr><td height="6"></td></tr-->
+<tr>
+<td>
+<table align="center" width="100%">
+<tr>
+<td align="justify" class="notasNotas">
+<b>1/</b> Para mayor información sobre este tipo de cambio consulte: <a class="liga" href="https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/circular-3-2012/operaciones-instituciones-cre.html " rel="noopener noreferrer" target="_blank">El Título Tercero, Capítulo V de la Circular 3/2012 del Banco de México</a>.
+                      </td>
+</tr>
+<tr>
+<td align="justify" class="notasNotas">
+<b>2/</b> El tipo de cambio FIX es determinado por el Banco de México los días hábiles bancarios con base en un promedio de las cotizaciones del mercado de cambios al mayoreo para operaciones liquidables el segundo día hábil bancario siguiente. Dichas cotizaciones se obtienen de plataformas de transacción cambiaria y otros medios electrónicos con representatividad en el mercado de cambios. El Banco de México da a conocer el FIX a partir de las 12:00 horas de todos los días hábiles bancarios.
+                      </td>
+</tr>
+<tr>
+<td align="justify" class="notasNotas">
+<b>3/</b> El tipo de cambio FIX se publica por el Banco de México en el Diario Oficial de la Federación el día hábil bancario inmediato siguiente a su determinación.
+                      </td>
+</tr>
+<tr>
+<td align="justify" class="notasNotas">
+<b>4/</b> El tipo de cambio que se debe de utilizar el día de hoy para calcular el equivalente en pesos del monto de las obligaciones de pago denominadas en dólares de los EE.UU.A. para ser cumplidas en la República Mexicana, debe de ser el publicado por el Banco de México en el Diario Oficial de la Federación el día hábil bancario inmediato anterior.
+                      </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
