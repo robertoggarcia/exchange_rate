@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -148,3 +148,7 @@ DIARIO_OFICIAL_URL = os.getenv('DIARIO_OFICIAL_URL')
 DIARIO_OFICIAL_TABLE_POSITION = int(os.getenv('DIARIO_OFICIAL_TABLE_POSITION'))
 DIARIO_OFICIAL_ROW_POSITION = int(os.getenv('DIARIO_OFICIAL_ROW_POSITION'))
 DIARIO_OFICIAL_COLUMN = int(os.getenv('DIARIO_OFICIAL_COLUMN'))
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
