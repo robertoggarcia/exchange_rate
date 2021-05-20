@@ -17,7 +17,7 @@ different sources in the same endpoint. Exchange rate sources:
 In order to execute the command to request the lastest exchage rate for each
  service provider use the following command. Consider use a linux cron or
   kind of service [Cronicle](http://cronicle.net/):
-- __Diario Oficial de la Federación__ service provider request: `python manage.py diario_oficial_prover`
+- __Diario Oficial de la Federación__ service provider request: `python manage.py diario_oficial_provider`
 - __Fixer__ service provider request: `python manage.py fixer_provider`
 - __Banxico__ service provider request: `python manage.py banxico_provider`
 
